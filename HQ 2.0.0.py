@@ -163,7 +163,7 @@ while True:
 
     Continue = False
     
-    for filename in glob.glob("A0001*"):
+    for filename in glob.glob("screenshot*"):
         if (os.path.isfile(filename)) == True:
             Continue = True
         else:
@@ -171,19 +171,19 @@ while True:
             
     if Continue == True:
 
-        time.sleep(0.1)
+        time.sleep(0.5)
         
         for filename in glob.glob("Original.jpg"):
             os.remove(filename) 
-        for filename in glob.glob("A0001*"):
+        for filename in glob.glob("screenshot*"):
             os.rename(filename,"Original.jpg")
 
         image = 'Original.jpg'
-        crop(image, (50, 200, 500, 620), 'Cropped.jpg')
+        crop(image, (70, 370, 1020, 1280), 'Cropped.jpg')
         print("Cropped?")
 
         qlist = run_ocr('Cropped.jpg')
-        google(qlist,50)
+        google(qlist,99)
         results = rank_answers(qlist)
         print_question_block(qlist)
         save_question_block(qlist)
