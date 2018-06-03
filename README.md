@@ -6,7 +6,8 @@ It uses any screen mirroring program to screenshot your phone, crop the image to
 reads it using Google's Vision API, searches the question comparing results to the answer and 
 trying to find the 'most correct' answer
 
-Requires The Following:
 Google cloud vision library and API Key (Gcloud)
+
 BS4 AKA BeautifulSoup
+
 PIL AKA Pillow
